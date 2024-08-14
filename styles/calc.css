@@ -1,0 +1,363 @@
+* {
+    /*box-sizing: border-box;*/
+    font-family: Monaco, 'Lucida Sans', monospace;
+    }
+
+h1 {
+    color: rgb(255, 255, 255);
+    border-bottom: 0.5rem solid rgb(85, 154, 85);
+    text-decoration: none;
+    font-family: Monaco, 'Lucida Sans', monospace;
+    font-size: 5vw;
+    position:relative;  
+    height:13%;  
+}
+
+body {
+    background-position: center;
+    background-image: url("treeBgblur.png");
+    background-size: cover; 
+   }
+
+.buttoncontainer{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height:5vw;
+}
+  
+.button:hover {
+    background-color: #7C6A9B;    /*change the color of the button when hovered*/
+}
+
+.dropbtn {
+    font-family: montserrat;
+    background-color: #7C6A9B;
+    color: white;
+    padding: 1vw;
+    font-size: 1vw;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    width: 3vw;
+    box-shadow: 0px 0px 100px rgba(190, 200, 255, 0.6);
+    font-family: Monaco, 'Lucida Sans', monospace;
+    border-radius: 50%;
+    height: 3vw;
+    margin-top: 1.5vw;
+    margin-right: 0;
+    top:0;
+    right:0;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    color: black;
+    position: fixed; /* Change from 'relative' to 'fixed' */
+    top: 0; 
+    right: 0; 
+    display: block;
+    float:none;
+    width: 150px;
+    border-radius: 10px 10px 10px 10px;
+    z-index: 1;
+}
+
+.dropdown-content {
+  display: none;
+  position: bottom;
+  background-color: #222228;
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 0px 0px 14px 14px;
+  box-shadow: 0px 0px 100px rgba(190, 200, 255, 0.25);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #33333f;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #222228;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: none;
+}
+
+form{
+    padding-top: 0;
+}
+
+#radio-label{
+    display:block;
+    text-align: center;
+}
+
+.container {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: flex-start;
+    height: 20vh;
+    margin-top: 15vh;
+    
+    }
+    
+.radio-tile-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width:100%;
+}
+
+.input-container {
+    position: relative;
+    height: 7rem;      /* size of the transport buttons*/
+    width: 7rem;
+    margin: 0.5rem;
+}
+
+.input-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-container .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid rgb(199, 96, 255);
+    border-radius: 8px;
+    transition: all 300ms ease;
+}
+
+.input-container ion-icon {
+    color: rgb(199, 96, 255);
+    font-size: 3rem;
+}
+
+.input-container label {
+    color: rgb(199, 96, 255);
+    font-size: 0.80rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input:checked+.radio-tile {
+background-color: rgb(199, 96, 255);
+box-shadow: 0 0 12px rgb(199, 96, 255);
+transform: scale(1.1);
+}
+
+input:hover+.radio-tile {
+box-shadow: 0 0 12px rgb(199, 96, 255);
+}
+
+input:checked+.radio-tile ion-icon,
+input:checked+.radio-tile label {
+    color: white;
+}
+
+label{
+    color:white;
+    font-size: 3.5vh;
+}
+
+input{
+    height:3.5vh;
+    display: inline-block;
+}
+
+.non-icons{
+    text-align: center;
+    padding-top: 8vh;
+}
+
+.non-icons>label{
+    padding-left:5vw;
+}
+
+.non-icons> input{
+    padding-left:0vw;
+}
+
+.style-input {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    margin-left:auto;
+    margin-right: 50px; 
+    width: 100%;
+    max-width: 350px;
+    border-radius: 2px;
+    padding: 1.2rem 1.6rem 1.4rem; 
+    background: rgba(57, 63, 84, 0.8);
+}
+
+.style-input:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF ,#B294FF);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.style-input input {
+    flex-grow: 1;
+    color: #BFD2FF;
+    font-size: 1.6rem; 
+    line-height: 2.2rem; 
+    vertical-align: middle; 
+    border: none;
+    background-color: transparent;
+
+}
+
+.style-input input::-webkit--input-placeholder {
+    color: #7881A1;
+}
+.journey-type input[type="radio"] {
+    display: none;
+  }
+
+.journey-type{
+    padding-left: 3vw;
+  }
+
+.journey-type label {
+    position: relative;
+    color: #7C6A9B;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8em;
+    border: 3px solid #7C6A9B;
+    padding: 0.5em 0.5em;
+    border-radius: 0.5em;
+    font-size: 2.5vh;
+  }
+
+  .journey-type label:before {
+    content: "";
+    height:0.5em;
+    width:0.5em;
+    border: 3px solid #7C6A9B;
+    border-radius: 50%;
+}
+input[type="radio"]:checked + label:before {
+    height:0.5em;
+    width:0.5em;
+    border: 0.3em solid #ffffff;
+    background-color: #7C6A9B;
+}
+input[type="radio"]:checked + label {
+    background-color: #7C6A9B;
+    color: #ffffff;
+}
+
+#saveForm{
+    padding-top: 10rem;
+}
+
+.submit-container{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+}
+
+#submit-button{
+    padding: 0.5rem 1rem;           /*change the size of the button*/
+    text-align: center center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #7C6A9B;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+    font-family: Monaco, 'Lucida Sans', monospace;
+    font-size: 3vh;
+    padding:0.5rem;
+    height:5vh;
+    line-height: 2.5vh;
+}
+
+#submit-button:hover{
+    background-color: white;
+    color:#7C6A9B;
+    }
+
+
+.after-submission{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    border: solid;
+    margin-top:5vh;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#submit-button2{
+    padding: 0.5rem 1rem;           /*change the size of the button*/
+    text-align: center center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #7C6A9B;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+    font-family: Monaco, 'Lucida Sans', monospace;
+    font-size: 3vh;
+    padding:0.5rem;
+    height:5vh;
+    line-height: 2.5vh; 
+}
+
+#submit-button2:hover{
+    background-color: white;
+    color:#7C6A9B;
+    }
+
+input[type="radio"]:disabled {
+        color: dimgrey;
+      }
+    
+      input[type="radio"]:disabled + hover {
+        color: dimgrey;
+      }
+      
